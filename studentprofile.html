@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        /* Add some basic styling for layout purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .sidebar {
+            background-color: #33333318;
+            color: white;
+            padding: 20px;
+            width: 20%;
+            float: left;
+            
+        }
+        .content {
+            padding: 20px;
+            width: 80%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Student Profile</h2>
+        <ul>
+            <li><a href="studentprofile.html">Profile</a></li>
+            <li><a href="studentsubmit.html">Assignment</a></li>
+            <li><a href="#">Progress</a></li>
+            <li><a href="indexpage.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Student Profile</h1>
+        <form action="update_profile.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required><br><br>
+
+            <label for="roll_number">Roll Number:</label>
+            <input type="text" id="roll_number" name="roll_number" required><br><br>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="ECE Engineering">Electronics & Communication Engineering</option>
+            </select><br><br>
+
+            <input   type="submit" value="Update Profile">
+        </form>
+        <a class="back" href="indexpage.html" >Back to Home</a>
+    </div>
+</body>
+</html>
